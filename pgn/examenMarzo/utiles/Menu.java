@@ -1,6 +1,6 @@
 package pgn.examenMarzo.utiles;
 
-
+import pgn.examenMarzo.concesionarioCoches.Color;
 
 /**
  * Clase utilizada para la gestión de un menú. Se dedica a:
@@ -20,9 +20,9 @@ public class Menu {
 	/**
 	 * 
 	 * @param titulo
-	 *            tÃ­tulo del menÃº
+	 *            título del menú
 	 * @param opciones
-	 *            opciones del menÃº
+	 *            opciones del menú
 	 */
 	public Menu(String titulo, String[] opciones) {
 		this.titulo = titulo;
@@ -31,10 +31,10 @@ public class Menu {
 	}
 
 	/**
-	 * Gestiona el menÃº. Consiste en mostrar las opcines y recoger la opciÃ³n
+	 * Gestiona el menú. Consiste en mostrar las opcines y recoger la opción
 	 * seleccionada por el usuario
 	 * 
-	 * @return opciÃ³n vÃ¡lida del menÃº
+	 * @return opción válida del menú
 	 */
 	public int gestionar() {
 		mostrar();
@@ -42,7 +42,7 @@ public class Menu {
 	}
 
 	/**
-	 * Muestra las opciones del menÃº
+	 * Muestra las opciones del menú
 	 */
 	private void mostrar() {
 		int i = 1;
@@ -52,9 +52,9 @@ public class Menu {
 	}
 
 	/**
-	 * Recoge la opciÃ³n vÃ¡lida del menÃº
+	 * Recoge la opción válida del menú
 	 * 
-	 * @return opciÃ³n vÃ¡lida
+	 * @return opción válida
 	 */
 	private int recogerOpcion() {
 		int opcion;
