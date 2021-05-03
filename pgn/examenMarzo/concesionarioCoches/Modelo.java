@@ -1,15 +1,15 @@
 package pgn.examenMarzo.concesionarioCoches;
 
 /**
- * Representa los modelos. Según el enunciado del examen:
+ * Representa los modelos. Segï¿½n el enunciado del examen:
  * 
  * <pre>
- *  Se limitarán los modelos de coches a siete: Córdoba (marca Seat),
+ *  Se limitarÃ¡n los modelos de coches a siete: Cï¿½rdoba (marca Seat),
  *  Toledo (marca Seat),Ibiza (marca Seat), Serie 1 (marca BMW), Serie 2 (marca BMW),
  *  Serie 3 (marca BMW) y Serie 5 (marca BMW).
  * </pre>
  * 
- * @author MaríaLourdes
+ * @author MagarÃ­n
  * 
  */
 public enum Modelo {
@@ -31,7 +31,7 @@ public enum Modelo {
 	SERIE5(Marca.BMW),
 
 	/**
-	 * El modelo Córdoba
+	 * El modelo Cï¿½rdoba
 	 */
 	CORDOBA(Marca.SEAT),
 
@@ -69,23 +69,23 @@ public enum Modelo {
 	}
 
 	/**
-	 * Devuelve una representación del modelo en forma de cadena.
+	 * Devuelve una representaciï¿½n del modelo en forma de cadena.
 	 */
 	public String toString() {
 		return name() + ", " + getMarca();
 
 	}
 
-	// Para el menú-------------------------------------------------
+	// Para el menï¿½-------------------------------------------------
 	/**
 	 * Almacena los modelos posibles
 	 */
 	private static final Modelo[] VALUES = values();
 
 	/**
-	 * Genera las opciones del menú
+	 * Genera las opciones del menï¿½
 	 * 
-	 * @return Opciones del menú, incluyendo "Salir"
+	 * @return Opciones del menï¿½, incluyendo "Salir"
 	 */
 	public String[] generarOpcionesMenu() {
 		String[] opcionesMenu = new String[VALUES.length + 1];

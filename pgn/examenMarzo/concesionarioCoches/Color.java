@@ -1,15 +1,15 @@
 package pgn.examenMarzo.concesionarioCoches;
 
 /**
- * Representa los colores. Según el enunciado del examen:
+ * Representa los colores. Segï¿½n el enunciado del examen:
  * 
  * <pre>
- * Se limitarán los colores a tres: plata, rojo y azul. Para solicitar el color
- * al dar de alta al coche podrá implementarse un método pedirColor que mediante
- * la gestión de un menú, devolverá el color indicado
+ * Se limitarÃ¡n los colores a tres: plata, rojo y azul. Para solicitar el color
+ * al dar de alta al coche podrï¿½ implementarse un mï¿½todo pedirColor que mediante
+ * la gestiÃ³n de un menï¿½, devolverï¿½ el color indicado
  * </pre>
  * 
- * @author María Lourdes Magarín Corvillo
+ * @author Marï¿½a Lourdes Magarï¿½n Corvillo
  * 
  */
 public enum Color {
@@ -31,9 +31,9 @@ public enum Color {
 	private static final Color[] VALUES = Color.values();
 
 	/**
-	 * Genera las opciones del menú
+	 * Genera las opciones del menï¿½
 	 * 
-	 * @return Opciones del menú, incluyendo "Salir"
+	 * @return Opciones del menï¿½, incluyendo "Salir"
 	 */
 	public String[] generarOpcionesMenu() {
 		String[] opcionesMenu = new String[getValues().length + 1];

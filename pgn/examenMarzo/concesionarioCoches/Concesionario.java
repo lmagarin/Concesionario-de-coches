@@ -3,46 +3,42 @@ package pgn.examenMarzo.concesionarioCoches;
 import java.util.ArrayList;
 
 /*
- * No pueden existir dos coches con la misma matrícula en el almacén del concesinario
- * no puede añadirse un coche al concecionario con alguno de sus atributos inválidos. Han de conocerse todas sus características 
+ * No pueden existir dos coches con la misma matrÃ­cula en el almacÃ©n del concesinario
+ * no puede aÃ±adirse un coche al concecionario con alguno de sus atributos invÃ¡lidos. Han de conocerse todas sus caracterï¿½sticas 
  * Ninguno de los valores puede ser por defecto
  */
 /**
  * Representa un concesionario de coches.
  * 
- * Lógicamente, no podrá añadirse un coche inválido almacén del concesinario)
+ * LÃ³gicamente, no podrÃ¡ aÃ±adirse un coche invÃ¡lido almacÃ©n del concesinario)
  * 
- * Han de conocerse todas sus características Ninguno de los valores puede ser
+ * Han de conocerse todas sus caracterï¿½sticas Ninguno de los valores puede ser
  * por defecto
  * 
- * @author MaríaLourdes
+ * @author MagarÃ­n
  * 
  */
 public class Concesionario {
 	/**
-	 * Almacén de los coches del concesionario
+	 * almacÃ©n de los coches del concesionario
 	 */
 	private ArrayList<Coche> almacen = new ArrayList<Coche>();
 	/**
 	 * Nombre del concesionario
 	 */
-	private final String nombre = "IES Gran Capitán";
+	private final String nombre = "IES Gran Capitï¿½n";
 
-	// P:Por qué no se necesita que annadir devuelva boolean??????
-	// P:Por qué no se especifican todas las excepciones de forma
-	// explícita??????
+	// P:Por quï¿½ no se necesita que annadir devuelva boolean??????
+	// P:Por quï¿½ no se especifican todas las excepciones de forma
+	// explï¿½cita??????
 	/**
-	 * Añade un coche al concesinario
+	 * Aï¿½ade un coche al concesinario
 	 * 
-	 * @param matricula
-	 *            Matrícula del coche a añadir
-	 * @param color
-	 *            Color del coche a añadir
-	 * @param modelo
-	 *            Modelo del coche a añadir
-	 * @throws Exception
-	 *             Si no se ha podido añadir el coche al concesionario, porque
-	 *             ya hay otro con la misma matrícula o porque faltan datos
+	 * @param matricula matrÃ­cula del coche a aï¿½adir
+	 * @param color     Color del coche a aï¿½adir
+	 * @param modelo    Modelo del coche a aï¿½adir
+	 * @throws Exception Si no se ha podido aï¿½adir el coche al concesionario, porque
+	 *                   ya hay otro con la misma matrÃ­cula o porque faltan datos
 	 */
 	void annadir(String matricula, Color color, Modelo modelo) throws Exception {
 		// Coche coche = Coche.instanciarCoche(matricula, color, modelo);
@@ -54,17 +50,14 @@ public class Concesionario {
 		if (!almacen.contains(coche))
 			almacen.add(coche);
 		else
-			throw new CocheYaExisteException(
-					"El coche ya existe en el concesionario. ");
+			throw new CocheYaExisteException("El coche ya existe en el concesionario. ");
 	}
 
 	/**
 	 * Elimina un coche del concesinario
 	 * 
-	 * @param matricula
-	 *            Matrícula del coche a eliminar
-	 * @throws MatriculaNoValidaException
-	 *             Si la matrícula no es válida en su formato
+	 * @param matricula matrÃ­cula del coche a eliminar
+	 * @throws MatriculaNoValidaException Si la matrÃ­cula no es vï¿½lida en su formato
 	 * @return true si se ha eliminado. false en otro caso
 	 */
 	boolean eliminar(String matricula) throws MatriculaNoValidaException {
@@ -72,35 +65,32 @@ public class Concesionario {
 	}
 
 	/**
-	 * Devuelve el número de coches en el almacén del concesionario
+	 * Devuelve el nï¿½mero de coches en el almacÃ©n del concesionario
 	 * 
-	 * @return Número de coches en el almacén del concesionario
+	 * @return Nï¿½mero de coches en el almacÃ©n del concesionario
 	 */
 	int size() {
 		return almacen.size();
 	}
 
 	/**
-	 * Devuelve el Coche del almacén indicado por la matrícula
+	 * Devuelve el Coche del almacÃ©n indicado por la matrÃ­cula
 	 * 
-	 * @param matricula
-	 *            Matrícula a buscar
-	 * @return Coche contenido en el almacén. null si no existe
-	 * @throws MatriculaNoValidaException
-	 *             Si la matrícula no es válida
+	 * @param matricula matrÃ­cula a buscar
+	 * @return Coche contenido en el almacÃ©n. null si no existe
+	 * @throws MatriculaNoValidaException Si la matrÃ­cula no es vï¿½lida
+	 * @throws CocheNoExisteException     Si el coche no existe
 	 */
-	Coche get(String matricula) throws MatriculaNoValidaException,
-			CocheNoExisteException {
+	Coche get(String matricula) throws MatriculaNoValidaException, CocheNoExisteException {
 		// Coche coche = Coche.instanciarCoche(matricula);
 		// int index = almacen.indexOf(new Coche(matricula));
 		// if (index != -1) {
-		// P: qué sucede si el coche no está en el concesionario?
+		// P: quï¿½ sucede si el coche no estï¿½ en el concesionario?
 
 		try {
 			return almacen.get(almacen.indexOf(new Coche(matricula)));
 		} catch (ArrayIndexOutOfBoundsException e) {
-			throw new CocheNoExisteException(
-					"El coche no está en el concesionario.");
+			throw new CocheNoExisteException("El coche no estï¿½ en el concesionario.");
 		}
 
 		// }

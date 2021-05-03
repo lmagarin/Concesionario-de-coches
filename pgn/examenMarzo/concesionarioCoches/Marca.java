@@ -1,7 +1,7 @@
 package pgn.examenMarzo.concesionarioCoches;
 /**
  * Marcas de los coches del concesionario
- * @author MaríaLourdes
+ * @author MagarÃ­n
  *
  */
 public enum Marca {

@@ -1,67 +1,60 @@
 package pgn.examenMarzo.concesionarioCoches;
 
-//P: indica las etiquetas html utilizadas para la documentación de la clase
-//P: Indica la utilidad de la etiqueta  -noqualifier  all a la hora de generar la documentación JavaDoc. Entrega un pantallazo indicando cómo se detalla en Eclipse
+//P: indica las etiquetas html utilizadas para la documentaciï¿½n de la clase
+//P: Indica la utilidad de la etiqueta  -noqualifier  all a la hora de generar la documentaciï¿½n JavaDoc. Entrega un pantallazo indicando cï¿½mo se detalla en Eclipse
 
 import pgn.examenMarzo.utiles.Menu;
 import pgn.examenMarzo.utiles.Teclado;
-import pgn.examenMarzo.concesionarioCoches.Color;
-import pgn.examenMarzo.concesionarioCoches.Modelo;
 
 /**
  * Queremos modelar un concesionario de coches en Java. Nos limitaremos a las
  * siguientes opciones:
  * <ol>
- * <li>Alta de un coche (se pedirá matricula, color y modelo),</li>
- * <li>Baja de un coche (por matrícula)</li>
- * <li>Mostrar un coche (por matrícula)</li>
+ * <li>Alta de un coche (se pedirï¿½ matricula, color y modelo),</li>
+ * <li>Baja de un coche (por matrÃ­cula)</li>
+ * <li>Mostrar un coche (por matrÃ­cula)</li>
  * <li>Mostrar concesionario (todos los coches del concesionario)</li>
- * <li>Contar el número de coches en el concesionario</li>
+ * <li>Contar el nï¿½mero de coches en el concesionario</li>
  * <li>Mostrar coches de un color</li>
  * </ol>
  * <p>
- * Lógicamente, no podrá añadirse un coche inválido o ya contenido (No pueden
- * existir dos coches con la misma matrícula en el concesionario) Por cada p que
- * se dé de alta, han de conocerse todas sus características. Ninguna de las
- * características del coche puede ser por defecto.
+ * Lï¿½gicamente, no podrï¿½ aÃ±adirse un coche invÃ¡lido o ya contenido (No pueden
+ * existir dos coches con la misma matrÃ­cula en el concesionario) Por cada p que
+ * se dï¿½ de alta, han de conocerse todas sus caracterï¿½sticas. Ninguna de las
+ * caracterï¿½sticas del coche puede ser por defecto.
  * 
- * @author MaríaLourdes
+ * @author MagarÃ­n
  * 
  */
-public class TestConcesionario extends ConcesionarioTest {
+public class TestConcesionario {
 	/**
-	 * Menú principal de la aplicación
+	 * menÃº principal de la aplicaciï¿½n
 	 */
-	static Menu menu = new Menu("Concesionario de coches", new String[] {
-			"Alta Coche", "Baja Coche", "Mostrar Coche",
-			"Mostrar concesionario", "Contar coches del concesionario",
-			"Mostrar coches de un color", "Salir" });
+	static Menu menu = new Menu("Concesionario de coches", new String[] { "Alta Coche", "Baja Coche", "Mostrar Coche",
+			"Mostrar concesionario", "Contar coches del concesionario", "Mostrar coches de un color", "Salir" });
 	/**
-	 * Menú para seleccionar los colores del coche
+	 * menÃº para seleccionar los colores del coche
 	 */
-	private static Menu menuColores = new Menu("Colores de los coches",
-			Color.AZUL.generarOpcionesMenu());
+	private static Menu menuColores = new Menu("Colores de los coches", Color.AZUL.generarOpcionesMenu());
 
 	/**
-	 * Menú para seleccionar los modelos del coche
+	 * menÃº para seleccionar los modelos del coche
 	 */
-	private static Menu menuModelos = new Menu("Modelos de los coches",
-			Modelo.CORDOBA.generarOpcionesMenu());
+	private static Menu menuModelos = new Menu("Modelos de los coches", Modelo.CORDOBA.generarOpcionesMenu());
 	/**
-	 * Donde se gestionará el concesionario
+	 * Donde se gestionarï¿½ el concesionario
 	 */
 	static Concesionario concesionario = new Concesionario();
 
 	/**
 	 * Arranque del programa
 	 * 
-	 * @param args
-	 *            No se utilizan
+	 * @param args No se utilizan
 	 */
 	public static void main(String[] args) {
 		do {
 			switch (menu.gestionar()) {
-			case 1:// "Añadir Coche
+			case 1:// "aÃ±adir Coche
 				annadirCoche();
 				break;
 			case 2:// Eliminar Coche
@@ -74,8 +67,7 @@ public class TestConcesionario extends ConcesionarioTest {
 				System.out.println(concesionario);
 				break;
 			case 5:// Contar coches
-				System.out.println("Número de coches en el concesionario: "
-						+ concesionario.size());
+				System.out.println("Nï¿½mero de coches en el concesionario: " + concesionario.size());
 				break;
 			case 6:// Mostrar coches de un color
 				System.out.println(concesionario.getCochesColor(pedirColor()));
@@ -89,13 +81,12 @@ public class TestConcesionario extends ConcesionarioTest {
 	}
 
 	/**
-	 * Muestra por consola el coche solicitando su la matrícula
+	 * Muestra por consola el coche solicitando su la matrÃ­cula
 	 */
 	private static void getCoche() {
 		// Coche coche;
 		try {
-			System.out.println(concesionario.get(Teclado
-					.leerCadena("Introduce la matrícula")));
+			System.out.println(concesionario.get(Teclado.leerCadena("Introduce la matrÃ­cula")));
 		} catch (MatriculaNoValidaException | CocheNoExisteException e) {
 			System.out.println(e.getMessage());
 		}
@@ -106,50 +97,46 @@ public class TestConcesionario extends ConcesionarioTest {
 	}
 
 	/**
-	 * Elimina un coche solicitando su la matrícula
+	 * Elimina un coche solicitando su la matrÃ­cula
 	 */
 	private static void eliminarCoche() {
 		try {
-			if (concesionario.eliminar(Teclado
-					.leerCadena("Introduce la matrícula")))
+			if (concesionario.eliminar(Teclado.leerCadena("Introduce la matrÃ­cula")))
 				System.out.println("Coche eliminado");
 			else
-				System.out
-						.println("El coche no se ha podido eliminar. No existe un coche con esa matrícula en el concesionario");
+				System.out.println(
+						"El coche no se ha podido eliminar. No existe un coche con esa matrÃ­cula en el concesionario");
 		} catch (MatriculaNoValidaException e) {
-			System.out.println(e.getMessage()
-					+ "No se ha podido eliminar el coche en el concesionario");
+			System.out.println(e.getMessage() + "No se ha podido eliminar el coche en el concesionario");
 		}
 	}
 
 	/**
-	 * Añade un coche solicitando sus datos por consola
+	 * aÃ±ade un coche solicitando sus datos por consola
 	 */
 	private static void annadirCoche() {
 
 		try {
-			concesionario.annadir(Teclado.leerCadena("Introduce la matrícula"),
-					pedirColor(), pedirModelo());
-			System.out.println("Coche añadido con éxito");
+			concesionario.annadir(Teclado.leerCadena("Introduce la matrÃ­cula"), pedirColor(), pedirModelo());
+			System.out.println("Coche aÃ±adido con Ã©xito");
 		} catch (Exception e) {
-			System.out.println(e.getMessage()
-					+ "No se ha podido añadir el coche en el concesionario");
+			System.out.println(e.getMessage() + "No se ha podido aÃ±adir el coche en el concesionario");
 		}
 
 		// else
-		// System.out.println("No se ha podido añadir");
+		// System.out.println("No se ha podido aÃ±adir");
 	}
 
 	/**
-	 * Solicita al usuario un modelo de coche Según el enunciado del examen:
+	 * Solicita al usuario un modelo de coche SegÃºn el enunciado del examen:
 	 * 
 	 * <pre>
-	 * Para solicitar el Modelo al dar de alta al coche se implementará un método
-	 * pedirModelo que mediante la gestión de un menú, devolverá el modelo indicado
+	 * Para solicitar el Modelo al dar de alta al coche se implementarÃ¡ un mÃ©todo
+	 * pedirModelo que mediante la gestiÃ³n de un menÃº, devolverÃ¡ el modelo indicado
 	 * </pre>
 	 * 
-	 * @return modelo introducido por el usuario. null si el usuario no
-	 *         introduce ninguno válido
+	 * @return modelo introducido por el usuario. null si el usuario no introduce
+	 *         ninguno vÃ¡lido
 	 */
 	private static Modelo pedirModelo() {
 		int opcion = menuModelos.gestionar();
@@ -160,15 +147,15 @@ public class TestConcesionario extends ConcesionarioTest {
 	}
 
 	/**
-	 * Solicita al usuario un color de coche. Según el enunciado del examen:
+	 * Solicita al usuario un color de coche. SegÃºn el enunciado del examen:
 	 * 
 	 * <pre>
-	 * Para solicitar el color al dar de alta al coche se implementará un método
-	 * pedirColor que mediante la gestión de un menú, devolverá el color indicado
+	 * Para solicitar el color al dar de alta al coche se implementarÃ¡ un mÃ©todo
+	 * pedirColor que mediante la gestiÃ³n de un menÃº, devolverÃ¡ el color indicado
 	 * </pre>
 	 * 
 	 * @return color introducido por el usuario. null si el usuario no introduce
-	 *         ninguno válido
+	 *         ninguno vÃ¡lido
 	 */
 	private static Color pedirColor() {
 		int opcion = menuColores.gestionar();
