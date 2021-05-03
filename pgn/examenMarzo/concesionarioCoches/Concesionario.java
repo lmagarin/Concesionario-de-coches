@@ -107,6 +107,12 @@ public class Concesionario {
 		return "Concesionario " + nombre + "[almacen=" + almacen + "]";
 	}
 
+	/**
+	 * Genera un ArrayList de coches del color indicado
+	 * 
+	 * @param color color del coche para almacenar en el nuevo ArrayList
+	 * @return ArrayList de coches del color indicado
+	 */
 	public ArrayList<Coche> getCochesColor(Color color) {
 		ArrayList<Coche> arrCochesColor = new ArrayList<Coche>();
 		for (Coche coche : almacen) {
