@@ -85,7 +85,7 @@ public class Concesionario {
 		// Coche coche = Coche.instanciarCoche(matricula);
 		// int index = almacen.indexOf(new Coche(matricula));
 		// if (index != -1) {
-		// P: qu� sucede si el coche no est� en el concesionario?
+		// P: qué sucede si el coche no est� en el concesionario?
 
 		try {
 			return almacen.get(almacen.indexOf(new Coche(matricula)));
