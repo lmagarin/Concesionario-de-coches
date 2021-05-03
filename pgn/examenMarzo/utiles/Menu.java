@@ -1,7 +1,7 @@
 package pgn.examenMarzo.utiles;
 
 /**
- * Clase utilizada para la gestión de un men�. Se dedica a:
+ * Clase utilizada para la gestión de un menú. Se dedica a:
  * <ol>
  * 
  * <li>Mostrar las opciones del menú</li>
@@ -19,8 +19,8 @@ public class Menu {
 
 	/**
 	 * 
-	 * @param titulo   t�tulo del men�
-	 * @param opciones opciones del men�
+	 * @param titulo   título del menú
+	 * @param opciones opciones del menú
 	 */
 	public Menu(String titulo, String[] opciones) {
 		this.titulo = titulo;
@@ -29,10 +29,10 @@ public class Menu {
 	}
 
 	/**
-	 * Gestiona el men�. Consiste en mostrar las opcines y recoger la opci�n
+	 * Gestiona el menú. Consiste en mostrar las opcines y recoger la opción
 	 * seleccionada por el usuario
 	 * 
-	 * @return opci�n v�lida del men�
+	 * @return opción válida del menú
 	 */
 	public int gestionar() {
 		mostrar();
@@ -40,7 +40,7 @@ public class Menu {
 	}
 
 	/**
-	 * Muestra las opciones del men�
+	 * Muestra las opciones del menú
 	 */
 	private void mostrar() {
 		int i = 1;
@@ -50,9 +50,9 @@ public class Menu {
 	}
 
 	/**
-	 * Recoge la opci�n v�lida del men�
+	 * Recoge la opción válida del menú
 	 * 
-	 * @return opci�n v�lida
+	 * @return opción válida
 	 */
 	private int recogerOpcion() {
 		int opcion;

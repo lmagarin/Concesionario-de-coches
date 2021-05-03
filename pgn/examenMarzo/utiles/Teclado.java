@@ -9,9 +9,9 @@ import java.io.InputStreamReader;
 public class Teclado {
 
 	/**
-	 * Lee un carácter del teclado
+	 * Lee un carÃ¡cter del teclado
 	 * 
-	 * @return carácter introducido por el usuario
+	 * @return carÃ¡cter introducido por el usuario
 	 */
 	public static char leerCaracter() {
 		char caracter;
@@ -24,11 +24,10 @@ public class Teclado {
 	}
 
 	/**
-	 * Lee un carácter del teclado
+	 * Lee un carÃ¡cter del teclado
 	 * 
-	 * @param msj
-	 *            mensaje mostrado al usuario
-	 * @return carácter introducido por el usuario
+	 * @param msj mensaje mostrado al usuario
+	 * @return carÃ¡cter introducido por el usuario
 	 */
 	public static char leerCaracter(String msj) {
 		System.out.println(msj);
@@ -38,8 +37,7 @@ public class Teclado {
 	/**
 	 * Lee una cadena del teclado
 	 * 
-	 * @param msj
-	 *            mensaje mostrado al usuario
+	 * @param msj mensaje mostrado al usuario
 	 * @return cadena introducida por el usuario
 	 */
 	public static String leerCadena(String msj) {
@@ -54,11 +52,10 @@ public class Teclado {
 	 */
 
 	public static String leerCadena() {
-		BufferedReader bReader = new BufferedReader(new InputStreamReader(
-				System.in));
+		BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
 		String cadena;
 		try {
-			cadena = bReader.readLine(); // Lee una línea de texto (hasta intro)
+			cadena = bReader.readLine(); // Lee una lÃ­nea de texto (hasta intro)
 		} catch (Exception e) {
 			cadena = "";
 		}
@@ -86,8 +83,7 @@ public class Teclado {
 	/**
 	 * Lee una entero del teclado
 	 * 
-	 * @param msj
-	 *            mensaje mostrado al usuario
+	 * @param msj mensaje mostrado al usuario
 	 * @return entero introducida por el usuario
 	 */
 	public static int leerEntero(String msj) {
@@ -116,8 +112,7 @@ public class Teclado {
 	/**
 	 * Lee una decimal del teclado
 	 * 
-	 * @param msj
-	 *            mensaje mostrado al usuario
+	 * @param msj mensaje mostrado al usuario
 	 * @return decimal introducida por el usuario
 	 */
 	public static double leerDecimal(String msj) {

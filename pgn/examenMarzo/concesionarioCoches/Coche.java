@@ -116,7 +116,7 @@ public class Coche {
 	 * @param matricula Matrícula a validar
 	 * @return true si la matrícula es válida. false en otro caso
 	 * 
-	 *         * @see Coche#patternMatricula
+	 * @see Coche#patternMatricula
 	 */
 	private static boolean esValida(String matricula) {
 		return patternMatricula.matcher(matricula).matches();
@@ -171,7 +171,7 @@ public class Coche {
 	}
 
 	/**
-	 * * Asigna el modelo del coche
+	 * Asigna el modelo del coche
 	 * 
 	 * @param modelo Modelo a asignar
 	 * @throws ModeloNoValidoException Si el Modelo es null

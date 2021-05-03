@@ -1,9 +1,8 @@
 /**
- * Suministra 
- * las clases necesarias para modelar un concesionario de coches en Java según las 
- * indicaciones del examen de programación de Marzo de 2015.
+ * Suministra las clases necesarias para modelar un concesionario de coches en
+ * Java segÃºn las indicaciones del examen de programaciÃ³n de Marzo de 2015.
  * 
- * @author María Lourdes Magarín Corvillo
+ * @author MarÃ­a Lourdes MagarÃ­n Corvillo
  *
  */
 package pgn.examenMarzo.concesionarioCoches;

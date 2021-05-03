@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /*
  * No pueden existir dos coches con la misma matrícula en el almacén del concesinario
- * no puede añadirse un coche al concecionario con alguno de sus atributos inválidos. Han de conocerse todas sus caracter�sticas 
+ * no puede añadirse un coche al concecionario con alguno de sus atributos inválidos. Han de conocerse todas sus características 
  * Ninguno de los valores puede ser por defecto
  */
 /**
@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * 
  * Lógicamente, no podrá añadirse un coche inválido almacén del concesinario)
  * 
- * Han de conocerse todas sus caracter�sticas Ninguno de los valores puede ser
+ * Han de conocerse todas sus características Ninguno de los valores puede ser
  * por defecto
  * 
  * @author Magarín
@@ -26,18 +26,18 @@ public class Concesionario {
 	/**
 	 * Nombre del concesionario
 	 */
-	private final String nombre = "IES Gran Capit�n";
+	private final String nombre = "IES Gran Capitán";
 
-	// P:Por qu� no se necesita que annadir devuelva boolean??????
-	// P:Por qu� no se especifican todas las excepciones de forma
-	// expl�cita??????
+	// P:Por qué no se necesita que annadir devuelva boolean??????
+	// P:Por qué no se especifican todas las excepciones de forma
+	// explícita??????
 	/**
-	 * A�ade un coche al concesinario
+	 * Añade un coche al concesinario
 	 * 
-	 * @param matricula matrícula del coche a a�adir
-	 * @param color     Color del coche a a�adir
-	 * @param modelo    Modelo del coche a a�adir
-	 * @throws Exception Si no se ha podido a�adir el coche al concesionario, porque
+	 * @param matricula matrícula del coche a añadir
+	 * @param color     Color del coche a añadir
+	 * @param modelo    Modelo del coche a añadir
+	 * @throws Exception Si no se ha podido añadir el coche al concesionario, porque
 	 *                   ya hay otro con la misma matrícula o porque faltan datos
 	 */
 	void annadir(String matricula, Color color, Modelo modelo) throws Exception {
@@ -57,7 +57,7 @@ public class Concesionario {
 	 * Elimina un coche del concesinario
 	 * 
 	 * @param matricula matrícula del coche a eliminar
-	 * @throws MatriculaNoValidaException Si la matrícula no es v�lida en su formato
+	 * @throws MatriculaNoValidaException Si la matrícula no es válida en su formato
 	 * @return true si se ha eliminado. false en otro caso
 	 */
 	boolean eliminar(String matricula) throws MatriculaNoValidaException {
@@ -65,9 +65,9 @@ public class Concesionario {
 	}
 
 	/**
-	 * Devuelve el n�mero de coches en el almacén del concesionario
+	 * Devuelve el número de coches en el almacén del concesionario
 	 * 
-	 * @return N�mero de coches en el almacén del concesionario
+	 * @return número de coches en el almacén del concesionario
 	 */
 	int size() {
 		return almacen.size();
@@ -78,7 +78,7 @@ public class Concesionario {
 	 * 
 	 * @param matricula matrícula a buscar
 	 * @return Coche contenido en el almacén. null si no existe
-	 * @throws MatriculaNoValidaException Si la matrícula no es v�lida
+	 * @throws MatriculaNoValidaException Si la matrícula no es válida
 	 * @throws CocheNoExisteException     Si el coche no existe
 	 */
 	Coche get(String matricula) throws MatriculaNoValidaException, CocheNoExisteException {
@@ -90,7 +90,7 @@ public class Concesionario {
 		try {
 			return almacen.get(almacen.indexOf(new Coche(matricula)));
 		} catch (ArrayIndexOutOfBoundsException e) {
-			throw new CocheNoExisteException("El coche no est� en el concesionario.");
+			throw new CocheNoExisteException("El coche no está en el concesionario.");
 		}
 
 		// }

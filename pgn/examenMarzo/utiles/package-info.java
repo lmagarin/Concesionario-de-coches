@@ -1,8 +1,8 @@
 /**
- * Suministra 
- * las clases necesarias para la comunicación con el usario mediante consola.
+ * Suministra las clases necesarias para la comunicaciÃ³n con el usario mediante
+ * consola.
  * 
- * @author María Lourdes Magarín Corvillo
+ * @author MarÃ­a Lourdes MagarÃ­n Corvillo
  *
  */
 package pgn.examenMarzo.utiles;

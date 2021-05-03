@@ -1,7 +1,7 @@
 package pgn.examenMarzo.concesionarioCoches;
 
-//P: indica las etiquetas html utilizadas para la documentaci�n de la clase
-//P: Indica la utilidad de la etiqueta  -noqualifier  all a la hora de generar la documentaci�n JavaDoc. Entrega un pantallazo indicando c�mo se detalla en Eclipse
+//P: indica las etiquetas html utilizadas para la documentación de la clase
+//P: Indica la utilidad de la etiqueta  -noqualifier  all a la hora de generar la documentación JavaDoc. Entrega un pantallazo indicando cómo se detalla en Eclipse
 
 import pgn.examenMarzo.utiles.Menu;
 import pgn.examenMarzo.utiles.Teclado;
@@ -10,25 +10,25 @@ import pgn.examenMarzo.utiles.Teclado;
  * Queremos modelar un concesionario de coches en Java. Nos limitaremos a las
  * siguientes opciones:
  * <ol>
- * <li>Alta de un coche (se pedir� matricula, color y modelo),</li>
+ * <li>Alta de un coche (se pedirá matricula, color y modelo),</li>
  * <li>Baja de un coche (por matrícula)</li>
  * <li>Mostrar un coche (por matrícula)</li>
  * <li>Mostrar concesionario (todos los coches del concesionario)</li>
- * <li>Contar el n�mero de coches en el concesionario</li>
+ * <li>Contar el número de coches en el concesionario</li>
  * <li>Mostrar coches de un color</li>
  * </ol>
  * <p>
- * L�gicamente, no podr� añadirse un coche inválido o ya contenido (No pueden
+ * Lógicamente, no podrá añadirse un coche inválido o ya contenido (No pueden
  * existir dos coches con la misma matrícula en el concesionario) Por cada p que
- * se d� de alta, han de conocerse todas sus caracter�sticas. Ninguna de las
- * caracter�sticas del coche puede ser por defecto.
+ * se dé de alta, han de conocerse todas sus características. Ninguna de las
+ * características del coche puede ser por defecto.
  * 
  * @author Magarín
  * 
  */
 public class TestConcesionario {
 	/**
-	 * menú principal de la aplicaci�n
+	 * menú principal de la aplicación
 	 */
 	static Menu menu = new Menu("Concesionario de coches", new String[] { "Alta Coche", "Baja Coche", "Mostrar Coche",
 			"Mostrar concesionario", "Contar coches del concesionario", "Mostrar coches de un color", "Salir" });
@@ -42,7 +42,7 @@ public class TestConcesionario {
 	 */
 	private static Menu menuModelos = new Menu("Modelos de los coches", Modelo.CORDOBA.generarOpcionesMenu());
 	/**
-	 * Donde se gestionar� el concesionario
+	 * Donde se gestionará el concesionario
 	 */
 	static Concesionario concesionario = new Concesionario();
 
@@ -67,7 +67,7 @@ public class TestConcesionario {
 				System.out.println(concesionario);
 				break;
 			case 5:// Contar coches
-				System.out.println("N�mero de coches en el concesionario: " + concesionario.size());
+				System.out.println("número de coches en el concesionario: " + concesionario.size());
 				break;
 			case 6:// Mostrar coches de un color
 				System.out.println(concesionario.getCochesColor(pedirColor()));
