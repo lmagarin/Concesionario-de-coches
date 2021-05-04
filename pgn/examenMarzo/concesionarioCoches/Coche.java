@@ -130,10 +130,10 @@ public class Coche {
 	 * @see Coche#patternMatricula
 	 */
 	private void setMatricula(String matricula) throws MatriculaNoValidaException {
-		if (esValida(matricula))
-			this.matricula = estandarizarMatricula(matricula);
-		else
+		if (!esValida(matricula))
 			throw new MatriculaNoValidaException("La matrícula no es válida. ");
+
+		this.matricula = estandarizarMatricula(matricula);
 	}
 
 	/**
