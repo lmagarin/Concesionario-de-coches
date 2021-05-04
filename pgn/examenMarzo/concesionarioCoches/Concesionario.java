@@ -47,10 +47,14 @@ public class Concesionario {
 		// return false;
 		// return almacen.add(coche);
 		Coche coche = new Coche(matricula, color, modelo);
-		if (!almacen.contains(coche))
-			almacen.add(coche);
-		else
+		if (almacen.contains(coche))
 			throw new CocheYaExisteException("El coche ya existe en el concesionario. ");
+
+		almacen.add(coche);
+//		if (!almacen.contains(coche))
+//			almacen.add(coche);
+//		else
+//			throw new CocheYaExisteException("El coche ya existe en el concesionario. ");
 	}
 
 	/**
